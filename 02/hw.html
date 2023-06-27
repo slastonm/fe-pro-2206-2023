@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let productPrice = Number(prompt('Product Price?'));
+        let productQuantity = Number(prompt('Product quantity ?'));
+
+        let totalPrice = productPrice*productQuantity;
+        let userProductInfo = 'Total price: ' + totalPrice;
+        console.log(userProductInfo);
+
+        let userProductBuy = Number(prompt('Type price?'));
+
+        // let sale = (userProductBuy/100)*10; 
+        let sale = userProductBuy*0.1;
+        let finalPrice = userProductBuy - sale;
+        console.log(finalPrice); 
+
+        let firstValue = Number(prompt('Type value?'));
+        let secondValue = Number(prompt('Type value?'));
+        let thirdValue = Number(prompt('Type value?'));
+        let forthValue = Number(prompt('Type value?'));
+
+        let middleValue = (firstValue+secondValue+thirdValue+ forthValue)/4;
+        console.log(middleValue);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
