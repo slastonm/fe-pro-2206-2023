@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        // 1) admin and 123456
+        // let loginName = prompt('enter your login name');
+        // let password = prompt('enter your password');
+        // if(loginName == 'admin' && password == '123456'){
+        //     alert('Hello admin');
+        // }
+        // else{
+        //     alert('User name or password incorrect');
+        // }
+
+        // let userAge = Number(prompt('Enter your age'));
+        // let checkUserAge = userAge >18 ? true : false;
+        // console.log(`User age pass check ${checkUserAge}`);
+
+        let dayInfo = prompt('Enter your day');
+
+        switch(dayInfo) {
+            case 'Вівторок':
+            case 'Четверг':
+                alert(`Сьогодні ${dayInfo} і у вас урок`);
+                // console.log('Test');
+                break;
+            case 'Понеділок':
+            case 'Середа':
+            case 'Пятниця':
+            case 'Суббота':
+            case 'Неділя':
+                alert(`Сьогодні ${dayInfo} і у вас нема урока`);
+                break;
+            default:
+                alert(`У нас нема інформації про ${dayInfo}`);
+        }
+    </script>
+</body>
+</html>
