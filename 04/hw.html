@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let emptyArray =[];
+        let secondEmptyArray = [];
+        for(let i=0; i<21; i+=2){
+            emptyArray.push(i);
+        }
+        console.log(`first array: ${emptyArray}`);
+
+        for(let i=0; i<21; i++){
+            if(i%2==0){
+                secondEmptyArray.push(i);
+            }
+        }
+        console.log(`second array: ${secondEmptyArray}`);
+
+        let keepRemove = ["Keep", "Remove", "Keep", "Remove", "Keep", "Keep", "Remove", "Remove"];
+        let keep = [];
+        for(let i=0; i<keepRemove.length; i++){
+            if(keepRemove[i]== 'Keep'){
+                keep.push(keepRemove[i]);
+            }
+        }
+        console.log(`All keep: ${keep}`);
+
+        let checkArr = [69, 96, -66, 77, 85, -85, 14, -20, 90, -36];
+
+        for(let i=0; i<checkArr.length; i++){
+            // if(checkArr[i]<0){
+            //     checkArr[i] = 0;
+            // }
+            checkArr[i] = checkArr[i]<0 ? 0 : checkArr[i];
+        }
+        console.log(`Checked: ${checkArr}`);
+
+        let days = ["Понеділок", "Середа", "Неділя"];
+        let plans = ["Урок 03", "Урок 04", "Вихідни"];
+
+
+        if(days.length == plans.length) {
+            for(let i =0; i<days.length; i++){
+                console.log(`Сьогодні ${days[i]} і у вас такі плани ${plans[i]}`);
+            }            
+        }
+        else{
+            alert('Додайте інформації по днях');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
