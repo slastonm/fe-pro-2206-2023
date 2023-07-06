@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let animals =['cat', 'cow', 'fish', 'chicken', 'dog', 'pig'];
+       
+
+
+
+
+        let moreAnimals =['cat', 'cow', 'cow', 'bat', 'cat2'];
+        let getAnimal = function(animalIndex, animalsArray) {
+            if(animalIndex == 'first'){
+                console.log(animalsArray[0]);
+            }
+            else if(animalIndex == 'last'){
+                console.log(animalsArray[animalsArray.length - 1]);
+            }
+            else{
+                console.log('Try first or last comand');
+            }
+        }
+
+        getAnimal('last', animals);
+        getAnimal('last', [1,2,3,4]);
+
+        let smile = [':)', '=)',':)', '=)',':)', '=)']; 
+        let smileMore = [':)', '=)',':)', '=)',':)', '=)']; 
+
+        // ':)
+
+        function chageSmileItem (newSmile, smileArray) {
+            for(let i = 0; i<smile.length; i++) {
+                if(smileArray[i] == ':)'){
+                    smileArray[i] = newSmile;
+                }
+            }
+        }
+
+        chageSmileItem('0_0', smile);
+        chageSmileItem(':=)', smileMore);
+
+        console.log(smile);
+        console.log(smileMore);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
