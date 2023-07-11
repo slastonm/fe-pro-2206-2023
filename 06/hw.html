@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function FilmMaker(filmName, year, rating) {
+            this.filmName = filmName;
+            this.year = year;
+            this.rating = rating;
+        }
+        FilmMaker.prototype.giveInfo = function(){
+            console.log(`This film is ${filmName} and ${year} is ${rating}`);
+        }
+
+        let films = [];
+        let filmTerminator = new FilmMaker('Terminator', 1997, 9);
+        let filmTerminator2 = new FilmMaker('Terminator2', 1999, 7);
+        let filmTerminator3 = new FilmMaker('Terminator3', 2001, 6);
+        let filmTerminator4 = new FilmMaker('Terminator4', 2003, 8);
+        let filmTerminator5 = new FilmMaker('Terminator5', 2005, 9);
+
+        films.push(filmTerminator);
+        films = films.concat(filmTerminator2, filmTerminator3, filmTerminator4, filmTerminator5);
+
+     
+
+        function sortPopular(arr){
+            arr.sort((a, b) => b.rating-a.rating);
+        }
+        sortPopular(films);
+        console.log(films);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
