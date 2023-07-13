@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const userInfo = {
+            username: 'John',
+            age:100
+        }
+        function sayHello(){
+            console.log(`Hello ${this.username} has age ${this.age}`);
+        }
+
+        sayHello();
+        sayHello.call(userInfo);
+
+        // apply 
+
+        function multiSayHello(message, gift){
+            console.log(`Hello ${this.username} and ${this.age} you have ${message} and ${gift}`);
+        }
+        multiSayHello.apply(userInfo, ['MESSAGE','GOLD']);
+
+        // bind
+
+        function summ(a, b){
+            return a + b;
+        } 
+
+        const addFive = summ.bind(null, 5);
+        console.log(addFive(4));
+        console.log(addFive(3));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
