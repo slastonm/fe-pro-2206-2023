@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let el = document.querySelector('h1');
+            el.addEventListener('copy', function(e){
+                alert('Copy is not allowed');
+                e.preventDefault();
+                
+            });
+            let textEl = document.querySelector('textarea');
+            textEl.addEventListener('paste', function(e){
+                alert('paste is not allowed');
+                e.preventDefault();
+            });
+
+            let btnEl = document.querySelector('button');
+            btnEl.addEventListener('click', function(e) {
+                // document.location.reload();
+                document.location = 'https://prog.kiev.ua/fe.html';
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1>
+        Secret 2
+    </h1>
+    <textarea name="" id="" cols="30" rows="10" placeholder="type text"></textarea>
+
+    <button>
+        Go to next page
+    </button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let output = document.querySelector('h1');
+            function myTimer(){
+                let datTime = new Date().toLocaleTimeString();
+                output.innerHTML = datTime;
+            }
+
+            let myInterval = setInterval(myTimer, 1000);
+
+            let btn = document.querySelector('.stop');
+
+            let timeOutFn = setTimeout(function(){
+            alert('Hello 2');
+        }, 7000);
+            btn.onclick = () =>{
+                // clearInterval(myInterval);
+                clearTimeout(timeOutFn);
+            }
+
+        };
+    </script>
+</head>
+<body>
+    <h1>
+        Info
+    </h1>
+    <button class="stop">
+        Stop stimer
+    </button>
+</body>
+</html>
