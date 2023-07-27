@@ -3,15 +3,15 @@ window.onload = function(){
     let patern = /\d\d\d/g;
 
     let regClass = new RegExp('css');
-    let regPaternClass = new RegExp("\d\d\d"); // ??
+    let regPaternClass = new RegExp(/\d\d\d/g); // ??
 
     let serchString = 'Sring text 123 css  and number 456';
     let serchIndex = serchString.search(patern);
     console.log(`Patern start from ${serchIndex}`);
     // let resultText = serchString.replace(patern, '!!!');
     // console.log(resultText);
-    let resultMatch = serchString.match(patern);
-    console.log(resultMatch);
+    let resultMatch = serchString.match(regPaternClass);
+    console.log(resultMatch, 111);
     let userOperation = '5 плюс 2 = 7';
     let operationValues = userOperation.match(/\d/g);
     console.log(`User opertion value ${operationValues}`);

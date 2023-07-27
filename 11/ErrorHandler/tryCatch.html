@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        try{
+
+        }
+        catch(error){
+
+        }
+        let user = {
+            username:'Tom',
+            userAge: 21
+        }
+        try{
+            // alert(someFunction());
+            if(user.language){
+                throw new SyntaxError('Language is not supported');
+            }
+        }
+        catch(error){
+            console.log(`Code error: ${error.name} M:${error.message} S:${error.stack}`);
+
+            // if(error.message == 'someFunction is not defined'){
+            //     alert('Press enter to continue');
+            // }
+        }
+        finally{
+            alert('Finished');
+        }
+    </script>
+</head>
+<body>
+    <h1>Try catch</h1>
+</body>
+</html>
