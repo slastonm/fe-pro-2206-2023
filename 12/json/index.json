@@ -1,0 +1,8 @@
+{
+    "usrName": "Bob",
+    "study": true,
+    "workCompany":{
+        "companyName":"Microsoft"
+    },
+    "skills":["html", "css", "JS"]
+}
