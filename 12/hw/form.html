@@ -35,6 +35,13 @@
             nickNameInput.addEventListener('input', validateForm);
             userEmail.addEventListener('input', validateForm);
             userPhone.addEventListener('input', validateForm);
+            submitBtn.onclick = function(e){
+              let data = JSON.parse(window.localStorage.getItem('userData'));
+              // data = [{}]
+              data.push({});
+              window.localStorage.userData = JSON.stringify(data)
+            }
+
 
         }
     </script>
