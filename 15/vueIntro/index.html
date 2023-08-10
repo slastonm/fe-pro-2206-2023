@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>
+        Hello VUE
+    </h1>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <h3>
+                    {{message}}
+                </h3>
+                <div>
+                    Product name: {{productName}} <br>
+                    product price: {{price}} / {{curency}}
+                </div>
+                <button v-on:click="changeCurency">
+                    Change curency
+                </button>
+                <button @click="price++">
+                    Up price
+                </button>
+                <button @click="price--">
+                    Low price
+                </button>
+                <button @mouseover="mouseEvent">
+                    Mouse over
+                </button>
+            </div>
+            <div class="row py-3">
+                <button class="btn btn-danger" @click="toggleBox">
+                    Toggle menu
+                </button>
+            </div>
+            <div v-if="isOpen">
+                Open true
+            </div>
+            <div v-else>
+                False
+            </div>
+            <div v-show="isOpen">
+                True too in Show
+            </div>
+            <div class="row py-4">
+                <div class="col-1">
+                    <img height="50" width="50" :src="imgPath" alt="img"> 
+                    <a v-bind:href="hrefValue">
+                        Course
+                    </a>              
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
