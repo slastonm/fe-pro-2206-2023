@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>
+                               Products: {{productAvalaible}} 
+                            </h4>
+                             <h4>
+                                Order: {{orderProduct}}
+                             </h4>
+                             <button 
+                                v-if="!orderCheck" 
+                                class="btn btn-success"
+                                @click="addProduct">
+                                Add to card
+                             </button>
+                             <button 
+                             v-else 
+                             class="btn btn-danger" @click="removeProduct">
+                                Remove from card
+                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
